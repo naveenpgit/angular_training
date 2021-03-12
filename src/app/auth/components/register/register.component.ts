@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Register } from "../../models/register";
 import { AuthService } from "../../services/auth.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-register",
@@ -10,7 +11,7 @@ import { AuthService } from "../../services/auth.service";
 export class RegisterComponent implements OnInit {
   register: Register = new Register();
   error: any = {};
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -18,11 +19,12 @@ export class RegisterComponent implements OnInit {
     console.log(JSON.stringify(this.register));
     this.authService.registerUser(this.register).subscribe(
       (data) => {
-        console.log(JSON.stringify(data));
+        console.log(data);
+        this.router.navigate(["auth/login"]);
       },
       (err) => {
-        console.log(err._body);
         this.error = JSON.parse(err._body);
+        console.log(this.error);
       }
     );
   }

@@ -9,7 +9,7 @@ export class AuthService {
   constructor(private http: Http, private httpCl: HttpClient) {}
 
   registerUser(data: Register): Observable<any> {
-    return this.http.post("api/users/register", data);
+    return this.httpCl.post("api/users/register", data);
   }
 
   loginUser(data: any): Observable<any> {
