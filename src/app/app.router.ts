@@ -17,6 +17,17 @@ export const router: Routes = [
     loadChildren: "app/profile/profile.module#ProfileModule",
     canActivate: [AuthGuards],
   },
+  {
+    path: "display-developers",
+    loadChildren:
+      "app/display-developers/display-developers.module#DisplayDevelopersModule",
+    canActivate: [AuthGuards],
+  },
+  {
+    path: "developer",
+    loadChildren: "app/developer/developer.module#DeveloperModule",
+    canActivate: [AuthGuards],
+  },
 ];
 
 export const appRouter: ModuleWithProviders = RouterModule.forRoot(router);
