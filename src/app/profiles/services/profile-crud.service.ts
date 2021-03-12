@@ -14,7 +14,7 @@ export class ProfileCrudService {
     return this.http.post("/api/profile", profileData);
   }
   getMyProfile() {
-    return this.http.get("/api/profile/me");
+    return this.http.get("/api/profile");
   }
 
   addEducation(education: Education) {

@@ -12,6 +12,7 @@ export class ProfileFormData {
   facebook?: string;
   linkedin?: string;
   instagram?: string;
+  handle?: string;
 }
 
 export class Experience {

@@ -10,6 +10,10 @@ export const router: Routes = [
     path: "auth",
     loadChildren: "app/auth/auth.module#AuthModule",
   },
+  {
+    path: "profiles",
+    loadChildren: "app/profile/profile.module#ProfileModule",
+  },
 ];
 
 export const appRouter: ModuleWithProviders = RouterModule.forRoot(router);
