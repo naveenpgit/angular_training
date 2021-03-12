@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
-import { decodeToken } from "jsontokens";
 import jwt_decode from "jwt-decode";
 @Component({
   selector: "app-login",
@@ -25,7 +24,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["/dashboard"]);
       },
       (err) => {
-        this.error = err.error;
+        this.error = JSON.parse(err._body);
         console.log(this.error);
       }
     );

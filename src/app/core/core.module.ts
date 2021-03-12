@@ -1,3 +1,4 @@
+import { AuthGuards } from "./guards/auth.guards";
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
@@ -10,5 +11,6 @@ import { HttpModule } from "@angular/http";
   imports: [CommonModule, HttpModule, CoreRoutingModule],
   declarations: [HeaderComponent, FooterComponent, LandingComponent],
   exports: [HeaderComponent, FooterComponent, LandingComponent],
+  providers: [AuthGuards],
 })
 export class CoreModule {}

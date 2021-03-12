@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { ProfileCrudService } from "../../../profiles/services/profile-crud.service";
 import { Router } from "@angular/router";
-import { Profile } from "../../models/profile";
-import { ProfileFormData } from "../../../profiles/models/profile-form-data";
+
+import { ProfileFormData } from "../../models/profile-form-data";
+import { ProfileCrudService } from "../../services/profile-crud.service";
 
 @Component({
   selector: "app-create-profile",
@@ -12,14 +12,14 @@ import { ProfileFormData } from "../../../profiles/models/profile-form-data";
 export class CreateProfileComponent implements OnInit {
   profileFormData: ProfileFormData = new ProfileFormData();
   constructor(
-    private profileService: ProfileCrudService,
+    private ProfileService: ProfileCrudService,
     private router: Router
   ) {}
 
   ngOnInit() {}
   createProfile() {
     this.profileFormData.handle = this.profileFormData.status;
-    this.profileService.createProfile(this.profileFormData).subscribe(
+    this.ProfileService.createProfile(this.profileFormData).subscribe(
       (data) => {
         this.router.navigate(["/dashboard"]);
       },

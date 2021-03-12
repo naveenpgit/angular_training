@@ -6,9 +6,8 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { DashboardActionsComponent } from "./components/dashboard-actions/dashboard-actions.component";
 import { EducationComponent } from "./components/education/education.component";
 import { ExperienceComponent } from "./components/experience/experience.component";
-import { httpInterceptors } from "../core/interceptors";
-import { ProfileCrudService } from "../profiles/services/profile-crud.service";
-import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
+import { ProfileCrudService } from "../profile/services/profile-crud.service";
 
 @NgModule({
   imports: [CommonModule, DashboardRoutingModule],
@@ -18,6 +17,6 @@ import { HttpClientModule, HttpClient } from "@angular/common/http";
     EducationComponent,
     ExperienceComponent,
   ],
-  providers: [httpInterceptors, ProfileCrudService, HttpClient],
+  providers: [HttpClient, ProfileCrudService],
 })
 export class DashboardModule {}

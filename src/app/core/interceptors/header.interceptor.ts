@@ -6,6 +6,7 @@ import {
   HttpEvent,
 } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
+
 @Injectable()
 export class HeaderInterceptor implements HttpInterceptor {
   constructor() {}
@@ -13,11 +14,10 @@ export class HeaderInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log("Header interceptor....");
+    console.log("Header Interceptor Invoked");
     const reqClone = req.clone({
-      setHeaders: { "Content-type": "application/json", foo: "bar" },
+      setHeaders: { "content-type": "application/json" },
     });
-
     return next.handle(reqClone);
   }
 }

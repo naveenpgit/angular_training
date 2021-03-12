@@ -1,8 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Params } from "@angular/router";
 import jwt_decode from "jwt-decode";
-import { ProfileCrudService } from "../../../profiles/services/profile-crud.service";
+
 import { Profile } from "../../models/profile";
+import { ProfileCrudService } from "../../services/profile-crud.service";
 
 @Component({
   selector: "app-profile",

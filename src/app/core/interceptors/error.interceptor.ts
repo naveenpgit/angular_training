@@ -5,22 +5,21 @@ import {
   HttpHandler,
   HttpEvent,
 } from "@angular/common/http";
-
-import { Router } from "@angular/router";
-import { catchError } from "rxjs/operators";
 import { Observable } from "rxjs/Observable";
+import { catchError } from "rxjs/operators";
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
-  constructor(private router: Router) {}
+  constructor() {}
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log("Error Interceptor");
+    console.log("Error Interceptor Invoked");
+
     return next.handle(req).pipe(
       catchError((err) => {
-        console.log("From Interceptor Error ", JSON.stringify(err));
+        console.log(JSON.stringify(err));
         return Observable.throw({
           status: err.status,
           statusText: err.statusText,

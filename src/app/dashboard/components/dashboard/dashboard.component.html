@@ -3,7 +3,7 @@
   <p class="lead"><i class="fas fa-user"></i> Welcome {{ name }}</p>
   <hr />
 
-  <div *ngIf="profile">
+  <div *ngIf="profile != null">
     <app-dashboard-actions></app-dashboard-actions>
     <hr />
     <div class="p-4 m-3">
@@ -20,13 +20,13 @@
     </div>
   </div>
   <hr />
-  <div class="">
+  <div class="" *ngIf="profile != null">
     <button class="btn btn-danger">
       <i class="fas fa-user-minus"></i> Delete My Account
     </button>
   </div>
 
-  <div *ngIf="!profile">
+  <div *ngIf="profile == null">
     <p>You have not yet setup a profile, please add some info</p>
     <a routerLink="/profiles/create-profile" class="btn btn-primary my-1">
       Create Profile

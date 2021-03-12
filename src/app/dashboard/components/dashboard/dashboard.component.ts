@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { ProfileCrudService } from "../../../profiles/services/profile-crud.service";
-import { Profile } from "../../../profile/models/profile";
+
+import { ProfileCrudService } from "../../../profile/services/profile-crud.service";
 
 @Component({
   selector: "app-dashboard",
@@ -10,12 +10,11 @@ import { Profile } from "../../../profile/models/profile";
 export class DashboardComponent implements OnInit {
   name: String = JSON.parse(localStorage.getItem("userDetails")).name;
   profile: any;
-  constructor(private profileService: ProfileCrudService) {}
+  constructor(private ProfileService: ProfileCrudService) {}
 
   ngOnInit() {
-    this.profileService.getMyProfile().subscribe(
+    this.ProfileService.getMyProfile().subscribe(
       (data) => {
-        console.log(data);
         this.profile = data;
       },
       (err) => {

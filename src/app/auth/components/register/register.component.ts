@@ -21,8 +21,8 @@ export class RegisterComponent implements OnInit {
         console.log(JSON.stringify(data));
       },
       (err) => {
-        console.log(err.error);
-        this.error = err.error;
+        console.log(err._body);
+        this.error = JSON.parse(err._body);
       }
     );
   }
