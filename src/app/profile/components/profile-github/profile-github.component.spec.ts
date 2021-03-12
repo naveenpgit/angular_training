@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileGithubComponent } from './profile-github.component';
 
@@ -6,12 +6,12 @@ describe('ProfileGithubComponent', () => {
   let component: ProfileGithubComponent;
   let fixture: ComponentFixture<ProfileGithubComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ ProfileGithubComponent ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfileGithubComponent);

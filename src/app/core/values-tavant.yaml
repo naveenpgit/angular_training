@@ -1,0 +1,173 @@
+aws:
+  enabled: true
+  region: 'us-east-1'
+  # TODO: IAM access key ID output by Terraform
+  accessKey: ''
+  # TODO: IAM secret access key output by Terraform
+  secretKey: ''
+
+postgres:
+  # TODO: FQDN for the Postgres instance created by Terraform (e.g., postgres.example.com)
+  host: ''
+  # TODO: password for the Postgres admin user created by Terraform
+  password: ''
+
+clusterAutoscaling:
+  enabled: true
+  # TODO: EKS cluster name create by Terraform
+  clusterName: ''
+
+oidc:
+  clientId: 'BJZeKnmSSQuSyfeK3QrrQuH1mxt3mrrXu'
+  hosted:
+    enabled: true
+    email: 'abhinav.asthana@tavant.com'
+    # TODO: we recommend you change this to a unique password you create
+    password: 'rJ4eKhmrS7uHJSxFhQSHXdrJ8lY2mrSX_'
+
+organizations:
+- slug: tavant
+
+#########################################################
+# DO NOT MODIFY VALUES BELOW UNLESS INSTRUCTED TO DO SO #
+#########################################################
+
+image:
+  # pull key provided to you by LogRocket
+  pullSecretData: 'eyJhdXRocyI6eyJodHRwczovL2djci5pbyI6eyJ1c2VybmFtZSI6Il9qc29uX2tleSIsInBhc3N3b3JkIjoie1xuICBcInR5cGVcIjogXCJzZXJ2aWNlX2FjY291bnRcIixcbiAgXCJwcm9qZWN0X2lkXCI6IFwibG9ncm9ja2V0LWRldmVsXCIsXG4gIFwicHJpdmF0ZV9rZXlfaWRcIjogXCI5MjZmNDY3YzZlZDY5OGE3NWQwMDg2MzBkYzc4OTM3M2ZhMGI3ZTAxXCIsXG4gIFwicHJpdmF0ZV9rZXlcIjogXCItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cXG5NSUlFdlFJQkFEQU5CZ2txaGtpRzl3MEJBUUVGQUFTQ0JLY3dnZ1NqQWdFQUFvSUJBUUMyUGttU1hwOFNlcXhTXFxuOFpPMFI2R2tNcUZMcjNiSGNYbVlpcExLdWRWVnVFM1JNL1ZxeWdYWDRrY25iUDZ4blpFNFlqcW5iRjVTQkNsQVxcbjQ4ejFIRUJycGNFaEhreUJIL3ZaYWlrYmVzYXNlR20xWUxoQWg3SmFkeXg2cmpqV0EyME4ydTN1Q3ZvRkgxQVJcXG5XRm1LMGdSZ0tuejZVL1NNenhJK2t0WGM5YzBWc2IzQ25lS1FOZzFJTEdsaHZua0RxNDNuS2JqdU9kMmRIWncyXFxubk5iTUJCNy9uV3JEQ1BveGI5eWhXempMYkZtTXJ0NUpBdEsycnpPNVlMa1lCdEI2ME5ZNGlmYk5DVDZDWlRaWlxcbnRlR2EyZEN2MTlEcVF3ZFF5MWp2QTd3WFg1WXo0Szh0OUQ4N2VJbXN5dzMvaVlHQzdVVWV0bUM2TFIyR096NzFcXG5XeER1OWgyZkFnTUJBQUVDZ2dFQUNoQkllY2UxMnd4aEpiZG5ZNllzKytjNzF2VWFod3J5SHdWUDg5ZnRPdTJSXFxuaG9MckEzbWlkdmhzMjNWK1h3cUhjV2lqT29tV2I4c0JDQzlNS3lEalFjNkdhckRFb3NERVpJNGpOUHhEcWxSL1xcbjZkOHNiWXZRd29RZ05hb1hRMkl2REh2UmRicXZjY2IzNGUxU0RJTnFjSEVJTTc2ZEc0VjN5WExNVW9aVVMrVkxcXG5uYWlPZnhKMkV3TlBheFpzMkJvVWtYQ3FXVHJuWUVEaUZhT1h3N1l4aWJCNk1aZDZqNGlyazliWGgwV2pxTUkwXFxueVJydUN1YkFUd3VVQ3MveHBudEs1QXhHS2ltcG1XczZVNG9oS0JPeC9MQmY0ckdrejU0VjVibi9CSDRNTGpOWVxcbmVscWZWRlI1TkgvZnAxOEc3UDlDU0RIUXVSakZBSllXSjZYUFQ0dWI4UUtCZ1FEOTBnRXBiVzZoLzIxVU9YTXJcXG45RDczaDF3WXhodUsvT21PT3FRR3NaMmZlYWFNVkNzd3JwV1FUMW9ZY0FMZysyQVNvN2tKcFVLTlp2SDdsdmFzXFxuQ1pGalJaV2E5aEo4eFFJSm9pMEJPWmJZLzBhVk1CTlhHTTlZUzVDQWVtWkMwWG1nQi96RGwwQkFEMmFhT0s0Q1xcbjYyUXh5MDB5ODBvVldFNTVQSDdJMGQwcFZ3S0JnUUMzenUzSEdQTU56bGZHWmVyMkEvaFJYanNBUy9iekhtR1ZcXG4rZDlqdGhqaGt2cWdVZ2RNcUhnSkZWbzY0Q3pJWndRZzd2SkZ1RTgxT2drNXNTcHNrSmEyak41R0JZV0Z2NWV1XFxuSE42aDFVZ3lsa3hMU09YTmFqY3NjRDVXMEFyQUZ6M3BtNWkzZlMvQzNId2plTnN3eDFkVHZHRDZvOFFjejBWK1xcbjdySEZiNVZZK1FLQmdRRDYrMEd5MlViZ1lWYVdSZ2lnbWUvNWk1dUIwOE5BZUQzcUtnb3ZwRW9jZTRvNGtMSDBcXG5mVzNmT05mNStpaWVsM0swZTdobzFVVXQxWEhLT2NqSTdOMGFzSi95andoUTMrM1g0TWxud0s1cy9GK3EvZExoXFxuK09KdWlLbm1vU0dsU01WZmZRWnYwWXZ5ekVmRWorOWhhNm16b3pnKy9WdHdKOVhSQkFUS1J0ck9HUUtCZ0JkVlxcbnJkb1kwTUp2NzdUQU81UC83UVpuY0JZWmpzQk9teFR2SSswRXNTUHlCTjlWaXBld3k0eGJxWmpQM04rVU5ISDVcXG40OGYySGhnanhnZ005ZFhTaFUrbmtwQlJJeUpYc0ducVFGbExPbDh4dFgzWlExTlFxTEI3ajI1MSt1ZG9DL1FjXFxuVE1iK25aR2ZiQ01VdEw3OGo1bVIwTDRCREdTYjY3YXhsdC81eW53QkFvR0FIM0NpUVp6Q0o1THRFMkh2WkN3QlxcbnlGK2UyZzZDd2lBaTk3ZWYzN213Vkh0OXNjSVhvK2tmeU0vL1laRE5FRlY5RHhFUVg4d3hhOTlZQlJGODRZRjJcXG5PM0NyWktFMTkyZVhzak43bFQyTmY0bkdONjFteWszUkFURjJrK0g4ZHM3MEM3ci9hcXFtWXVSeWlTbUgxQmpGXFxubTZQYmxxTHArTzcvQ0tneWl5alNjN1E9XFxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxcblwiLFxuICBcImNsaWVudF9lbWFpbFwiOiBcInRhdmFudC1nY3Itcm9AbG9ncm9ja2V0LWRldmVsLmlhbS5nc2VydmljZWFjY291bnQuY29tXCIsXG4gIFwiY2xpZW50X2lkXCI6IFwiMTA1MDUxOTAxMzUwNjY3NTU2NjUzXCIsXG4gIFwiYXV0aF91cmlcIjogXCJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vby9vYXV0aDIvYXV0aFwiLFxuICBcInRva2VuX3VyaVwiOiBcImh0dHBzOi8vb2F1dGgyLmdvb2dsZWFwaXMuY29tL3Rva2VuXCIsXG4gIFwiYXV0aF9wcm92aWRlcl94NTA5X2NlcnRfdXJsXCI6IFwiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3YxL2NlcnRzXCIsXG4gIFwiY2xpZW50X3g1MDlfY2VydF91cmxcIjogXCJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9yb2JvdC92MS9tZXRhZGF0YS94NTA5L3RhdmFudC1nY3Itcm8lNDBsb2dyb2NrZXQtZGV2ZWwuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb21cIlxufSIsImVtYWlsIjoic3VwcG9ydCt0YXZhbnRAbG9ncm9ja2V0LmNvbSIsImF1dGgiOiJYMnB6YjI1ZmEyVjVPbnNLSUNBaWRIbHdaU0k2SUNKelpYSjJhV05sWDJGalkyOTFiblFpTEFvZ0lDSndjbTlxWldOMFgybGtJam9nSW14dlozSnZZMnRsZEMxa1pYWmxiQ0lzQ2lBZ0luQnlhWFpoZEdWZmEyVjVYMmxrSWpvZ0lqa3lObVkwTmpkak5tVmtOams0WVRjMVpEQXdPRFl6TUdSak56ZzVNemN6Wm1Fd1lqZGxNREVpTEFvZ0lDSndjbWwyWVhSbFgydGxlU0k2SUNJdExTMHRMVUpGUjBsT0lGQlNTVlpCVkVVZ1MwVlpMUzB0TFMxY2JrMUpTVVYyVVVsQ1FVUkJUa0puYTNGb2EybEhPWGN3UWtGUlJVWkJRVk5EUWt0amQyZG5VMnBCWjBWQlFXOUpRa0ZSUXpKUWEyMVRXSEE0VTJWeGVGTmNiamhhVHpCU05rZHJUWEZHVEhJellraGpXRzFaYVhCTVMzVmtWbFoxUlROU1RTOVdjWGxuV0ZnMGEyTnVZbEEyZUc1YVJUUlphbkZ1WWtZMVUwSkRiRUZjYmpRNGVqRklSVUp5Y0dORmFFaHJlVUpJTDNaYVlXbHJZbVZ6WVhObFIyMHhXVXhvUVdnM1NtRmtlWGcyY21wcVYwRXlNRTR5ZFROMVEzWnZSa2d4UVZKY2JsZEdiVXN3WjFKblMyNTZObFV2VTAxNmVFa3JhM1JZWXpsak1GWnpZak5EYm1WTFVVNW5NVWxNUjJ4b2RtNXJSSEUwTTI1TFltcDFUMlF5WkVoYWR6SmNibTVPWWsxQ1FqY3ZibGR5UkVOUWIzaGlPWGxvVjNwcVRHSkdiVTF5ZERWS1FYUkxNbko2VHpWWlRHdFpRblJDTmpCT1dUUnBabUpPUTFRMlExcFVXbHBjYm5SbFIyRXlaRU4yTVRsRWNWRjNaRkY1TVdwMlFUZDNXRmcxV1hvMFN6aDBPVVE0TjJWSmJYTjVkek12YVZsSFF6ZFZWV1YwYlVNMlRGSXlSMDk2TnpGY2JsZDRSSFU1YURKbVFXZE5Ra0ZCUlVOblowVkJRMmhDU1dWalpURXlkM2hvU21Ka2JsazJXWE1ySzJNM01YWlZZV2gzY25sSWQxWlFPRGxtZEU5MU1sSmNibWh2VEhKQk0yMXBaSFpvY3pJelZpdFlkM0ZJWTFkcGFrOXZiVmRpT0hOQ1EwTTVUVXQ1UkdwUll6WkhZWEpFUlc5elJFVmFTVFJxVGxCNFJIRnNVaTljYmpaa09ITmlXWFpSZDI5UlowNWhiMWhSTWtsMlJFaDJVbVJpY1haalkySXpOR1V4VTBSSlRuRmpTRVZKVFRjMlpFYzBWak41V0V4TlZXOWFWVk1yVmt4Y2JtNWhhVTltZUVveVJYZE9VR0Y0V25NeVFtOVZhMWhEY1ZkVWNtNVpSVVJwUm1GUFdIYzNXWGhwWWtJMlRWcGtObW8wYVhKck9XSllhREJYYW5GTlNUQmNibmxTY25WRGRXSkJWSGQxVlVOekwzaHdiblJMTlVGNFIwdHBiWEJ0VjNNMlZUUnZhRXRDVDNndlRFSm1OSEpIYTNvMU5GWTFZbTR2UWtnMFRVeHFUbGxjYm1Wc2NXWldSbEkxVGtndlpuQXhPRWMzVURsRFUwUklVWFZTYWtaQlNsbFhTalpZVUZRMGRXSTRVVXRDWjFGRU9UQm5SWEJpVnpab0x6SXhWVTlZVFhKY2JqbEVOek5vTVhkWmVHaDFTeTlQYlU5UGNWRkhjMW95Wm1WaFlVMVdRM04zY25CWFVWUXhiMWxqUVV4bkt6SkJVMjgzYTBwd1ZVdE9XblpJTjJ4MllYTmNia05hUm1wU1dsZGhPV2hLT0hoUlNVcHZhVEJDVDFwaVdTOHdZVlpOUWs1WVIwMDVXVk0xUTBGbGJWcERNRmh0WjBJdmVrUnNNRUpCUkRKaFlVOUxORU5jYmpZeVVYaDVNREI1T0RCdlZsZEZOVFZRU0RkSk1HUXdjRlozUzBKblVVTXplblV6U0VkUVRVNTZiR1pIV21WeU1rRXZhRkpZYW5OQlV5OWlla2h0UjFaY2JpdGtPV3AwYUdwb2EzWnhaMVZuWkUxeFNHZEtSbFp2TmpSRGVrbGFkMUZuTjNaS1JuVkZPREZQWjJzMWMxTndjMnRLWVRKcVRqVkhRbGxYUm5ZMVpYVmNia2hPTm1neFZXZDViR3Q0VEZOUFdFNWhhbU56WTBRMVZ6QkJja0ZHZWpOd2JUVnBNMlpUTDBNelNIZHFaVTV6ZDNneFpGUjJSMFEyYnpoUlkzb3dWaXRjYmpkeVNFWmlOVlpaSzFGTFFtZFJSRFlyTUVkNU1sVmlaMWxXWVZkU1oybG5iV1V2TldrMWRVSXdPRTVCWlVRemNVdG5iM1p3Ulc5alpUUnZOR3RNU0RCY2JtWlhNMlpQVG1ZMUsybHBaV3d6U3pCbE4yaHZNVlZWZERGWVNFdFBZMnBKTjA0d1lYTktMM2xxZDJoUk15c3pXRFJOYkc1M1N6VnpMMFlyY1M5a1RHaGNiaXRQU25WcFMyNXRiMU5IYkZOTlZtWm1VVnAyTUZsMmVYcEZaa1ZxS3psb1lUWnRlbTk2WnlzdlZuUjNTamxZVWtKQlZFdFNkSEpQUjFGTFFtZENaRlpjYm5Ka2Ixa3dUVXAyTnpkVVFVODFVQzgzVVZwdVkwSlpXbXB6UWs5dGVGUjJTU3N3UlhOVFVIbENUamxXYVhCbGQzazBlR0p4V21wUU0wNHJWVTVJU0RWY2JqUTRaakpJYUdkcWVHZG5UVGxrV0ZOb1ZTdHVhM0JDVWtsNVNsaHpSMjV4VVVac1RFOXNPSGgwV0ROYVVURk9VWEZNUWpkcU1qVXhLM1ZrYjBNdlVXTmNibFJOWWl0dVdrZG1Za05OVlhSTU56aHFOVzFTTUV3MFFrUkhVMkkyTjJGNGJIUXZOWGx1ZDBKQmIwZEJTRE5EYVZGYWVrTktOVXgwUlRKSWRscERkMEpjYm5sR0syVXlaelpEZDJsQmFUazNaV1l6TjIxM1ZraDBPWE5qU1ZodksydG1lVTB2TDFsYVJFNUZSbFk1UkhoRlVWZzRkM2hoT1RsWlFsSkdPRFJaUmpKY2JrOHpRM0phUzBVeE9USmxXSE5xVGpkc1ZESk9aalJ1UjA0Mk1XMTVhek5TUVZSR01tc3JTRGhrY3pjd1F6ZHlMMkZ4Y1cxWmRWSjVhVk50U0RGQ2FrWmNibTAyVUdKc2NVeHdLMDgzTDBOTFozbHBlV3BUWXpkUlBWeHVMUzB0TFMxRlRrUWdVRkpKVmtGVVJTQkxSVmt0TFMwdExWeHVJaXdLSUNBaVkyeHBaVzUwWDJWdFlXbHNJam9nSW5SaGRtRnVkQzFuWTNJdGNtOUFiRzluY205amEyVjBMV1JsZG1Wc0xtbGhiUzVuYzJWeWRtbGpaV0ZqWTI5MWJuUXVZMjl0SWl3S0lDQWlZMnhwWlc1MFgybGtJam9nSWpFd05UQTFNVGt3TVRNMU1EWTJOelUxTmpZMU15SXNDaUFnSW1GMWRHaGZkWEpwSWpvZ0ltaDBkSEJ6T2k4dllXTmpiM1Z1ZEhNdVoyOXZaMnhsTG1OdmJTOXZMMjloZFhSb01pOWhkWFJvSWl3S0lDQWlkRzlyWlc1ZmRYSnBJam9nSW1oMGRIQnpPaTh2YjJGMWRHZ3lMbWR2YjJkc1pXRndhWE11WTI5dEwzUnZhMlZ1SWl3S0lDQWlZWFYwYUY5d2NtOTJhV1JsY2w5NE5UQTVYMk5sY25SZmRYSnNJam9nSW1oMGRIQnpPaTh2ZDNkM0xtZHZiMmRzWldGd2FYTXVZMjl0TDI5aGRYUm9NaTkyTVM5alpYSjBjeUlzQ2lBZ0ltTnNhV1Z1ZEY5NE5UQTVYMk5sY25SZmRYSnNJam9nSW1oMGRIQnpPaTh2ZDNkM0xtZHZiMmRzWldGd2FYTXVZMjl0TDNKdlltOTBMM1l4TDIxbGRHRmtZWFJoTDNnMU1Ea3ZkR0YyWVc1MExXZGpjaTF5YnlVME1HeHZaM0p2WTJ0bGRDMWtaWFpsYkM1cFlXMHVaM05sY25acFkyVmhZMk52ZFc1MExtTnZiU0lLZlE9PSJ9fX0='
+  version: 12
+
+enterprise:
+  # string consisting of lowercase letters, numbers, and/or hyphens (e.g., company-name)
+  singleOrgSlug: 'tavant'
+  # license key provided to you by LogRocket
+  licenseKey: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xvZ3JvY2tldC5jb20vIiwic3ViIjoidGF2YW50IiwianRpIjoiYjNjNDkyYmQtNDIxMC00Y2VmLWI1N2ItODZmNTk2MTdmNzZhIiwiaWF0IjoxNjE1MzE1ODU3LCJuYmYiOjE2MTUzMTU4NTcsImV4cCI6MTY0NTI5NTUxOCwic2Vzc2lvbkxpbWl0Ijo1MDAwMDAsInJldGVudGlvbldlZWtzIjo0LCJzZWFyY2hSZXRlbnRpb25XZWVrcyI6NCwiZGFzaGJvYXJkVXNlckxpbWl0Ijo1MCwibXVsdGlUZW5hbnRFbmFibGVkIjp0cnVlLCJhdWQiOlsibG9ncm9ja2V0LnRhdmFudC5jb20iXX0.oOG4iHxC5au2BfXsayg_-VNJXGg8n-zMWPVV_IePIF2xj0DxM3Jj8j9ua2yFBdxeUlAl2Xo-QOw8T1qbIuu43o4f5j9cjyTzHSI_P4-NcvjPvS6aAVZLUz2i4ywwrFTkx31-mJcU6Ej3I8HOz1NS89PCzhtpnjyMs1UgmW8ZSpF9fKHoSirczdZKaeAJ_An2DQ6UEGF_wUYZeNtNs6548_oKZ_RYcFp6f1oBdaCPGlSToA8Qn0ei892uRfqjO-qBUVwevfEbR4W3Ei5seh0XA7IaqT-2qaPkOzVyYAFrjE6gJZQfawSklSQRGYJrUsb75eGb9K31Waxphlol2_a-ow'
+  multiTenant: true
+
+domains:
+  # FQDN for the LogRocket data ingestion service (e.g., logrocket-ingest.example.com)
+  ingest: 'logrocket.tavant.com'
+  # FQDN for the LogRocket API (e.g., logrocket-api.example.com)
+  api: 'logrocket.tavant.com'
+  # FQDN for the LogRocket dashboard (e.g., logrocket.example.com)
+  dashboard: 'logrocket.tavant.com'
+
+resources:
+  enabled: true
+
+autoscaling:
+  enabled: true
+
+tls:
+  enabled: true
+  acme:
+    enabled: true
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: 'abhinav.asthana@tavant.com'
+
+nginx-ingress:
+  controller:
+    service:
+      annotations:
+        service.beta.kubernetes.io/aws-load-balancer-proxy-protocol: "*"
+        # required if using an internal load balancer
+        # https://docs.aws.amazon.com/eks/latest/userguide/load-balancing.html
+        # service.beta.kubernetes.io/aws-load-balancer-internal: '0.0.0.0/0'
+    config:
+      use-proxy-protocol: "true"
+
+inCluster:
+  redis: false
+  elasticsearch: false
+
+inClusterRedis:
+  master:
+    persistence:
+      storageClass: 'gp2-standard'
+    resources:
+      requests:
+        cpu: 200m
+
+inClusterElasticSearch:
+  common:
+    stateful:
+      class: 'gp2-standard'
+  client:
+    replicas: 1
+  data:
+    replicas: 1
+  master:
+    replicas: 1
+    env:
+      NUMBER_OF_MASTERS: "1"
+
+fileStorage:
+  type: 'aws'
+  buckets:
+    userFiles: 'tavant-logrocket-files'
+    messageBlobs: 'tavant-logrocket-messageblobs'
+    videoCacheBlobs: 'tavant-logrocket-video-caches'
+
+queue:
+  type: 'redis'
+
+assets:
+  replicas: 1
+  autoscaling:
+    minReplicas: 1
+
+ingest:
+  replicas: 1
+  autoscaling:
+    minReplicas: 1
+
+pgbouncer:
+  replicas: 1
+
+process:
+  replicas: 1
+
+mutator:
+  replicas: 1
+
+scache:
+  replicas: 1
+
+graphql:
+  replicas: 1
+  autoscaling:
+    minReplicas: 1
+
+troytown:
+  replicas: 1
+  # any random string (used as a shared secret by the LogRocket backend)
+  secretKey: 'B1Kh7BHm_H1gKhmSBQdHJZYnXSSXu'
+  # any random string (used as a shared secret by the LogRocket backend)
+  authToken: 'S1fY3mBBQur1Qt3XSHmOHkVY37BrQ_'
+  autoscaling:
+    minReplicas: 1
+
+errorReporting:
+  enabled: true
+  authToken: 'rJOt3mHSX_HJKt3QSr7_H19YhQBSQO'
+  secretKey: 'B1BY27BBmdrJIKhmSSmuryDt3XSH7u'
+  redisUri: '{input uri here}'
+
+metrics-server:
+  enabled: true
+  args:
+   - --logtostderr
+   - --kubelet-preferred-address-types=InternalIP
+
+elasticSearch:
+  uri: '{input uri here}'
+  awsClientEnabled: true
+  hrefNgramQuery: true
+
+redis: # optional when using in-cluster redis
+  uri: '{input uri here}'
+
+directIngestion:
+  enabled: true
+  publish: true
+  read: true

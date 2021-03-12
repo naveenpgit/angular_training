@@ -13,11 +13,18 @@ export class JwtInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log("Finally....");
-    const reqClone = req.clone({
-      setHeaders: { Authorization: `${localStorage.getItem("token")}` },
-    });
+    if (
+      (req.url && req.url.includes("/login")) ||
+      req.url.includes("/register")
+    ) {
+      return next.handle(req);
+    } else {
+      console.log("Finally....");
+      const reqClone = req.clone({
+        setHeaders: { Authorization: `${localStorage.getItem("token")}` },
+      });
 
-    return null;
+      return next.handle(reqClone);
+    }
   }
 }

@@ -1,24 +1,35 @@
-<div class="dashboard">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="display-4">Dashboard</h1>
-        <p class="lead text-muted">Welcome {{ name }}</p>
-        <!-- Dashboard Actions -->
-        <div class="btn-group mb-4" role="group">
-          <a href="edit-profile.html" class="btn btn-light">
-            <i class="fas fa-user-circle text-info mr-1"></i> Edit Profile</a
-          >
-          <a href="add-experience.html" class="btn btn-light">
-            <i class="fab fa-black-tie text-info mr-1"></i>
-            Add Experience</a
-          >
-          <a href="add-education.html" class="btn btn-light">
-            <i class="fas fa-graduation-cap text-info mr-1"></i>
-            Add Education</a
-          >
-        </div>
+<div class="container">
+  <h1 class="display-4 text-primary">Dashboard</h1>
+  <p class="lead"><i class="fas fa-user"></i> Welcome {{ name }}</p>
+  <hr />
+
+  <div *ngIf="profile">
+    <app-dashboard-actions></app-dashboard-actions>
+    <hr />
+    <div class="p-4 m-3">
+      <div class="shadow p-4">
+        <p class="display-6">Education :</p>
+        <app-education [profile]="profile"></app-education>
+      </div>
+      <hr />
+
+      <div class="shadow p-4">
+        <p class="display-6">Experience :</p>
+        <app-experience [profile]="profile"></app-experience>
       </div>
     </div>
+  </div>
+  <hr />
+  <div class="">
+    <button class="btn btn-danger">
+      <i class="fas fa-user-minus"></i> Delete My Account
+    </button>
+  </div>
+
+  <div *ngIf="!profile">
+    <p>You have not yet setup a profile, please add some info</p>
+    <a routerLink="/profiles/create-profile" class="btn btn-primary my-1">
+      Create Profile
+    </a>
   </div>
 </div>
