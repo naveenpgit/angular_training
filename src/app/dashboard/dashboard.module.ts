@@ -8,9 +8,10 @@ import { EducationComponent } from "./components/education/education.component";
 import { ExperienceComponent } from "./components/experience/experience.component";
 import { HttpClient } from "@angular/common/http";
 import { ProfileCrudService } from "../profile/services/profile-crud.service";
+import { CoreModule } from "../core/core.module";
 
 @NgModule({
-  imports: [CommonModule, DashboardRoutingModule],
+  imports: [CommonModule, CoreModule, DashboardRoutingModule],
   declarations: [
     DashboardComponent,
     DashboardActionsComponent,
